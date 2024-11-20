@@ -1,0 +1,5 @@
+package com.nist.studentwebapp.controller;
+
+public class Student {
+
+}
