@@ -35,7 +35,7 @@ function confirmDelete(studentName) {
                     <td><c:out value="${student.contact}"></c:out></td>
                     <td><c:out value="${student.gender}"></c:out></td>
                     <td>
-                    <a href="Controller?action=edit"><button type="button" class="btn btn-success">Edit</button></a>
+                    <a href="Controller?action=edit&id=${student.id}"><button type="button" class="btn btn-success">Edit</button></a>
                     <a href="Controller?action=delete&id=${student.id}"onclick="return confirmDelete('${student.name}')"><button type="button" class="btn btn-danger">Delete</button></a>
                     </td>
                 </tr>

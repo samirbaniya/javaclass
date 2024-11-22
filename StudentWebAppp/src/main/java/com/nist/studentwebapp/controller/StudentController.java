@@ -23,17 +23,31 @@ public class StudentController extends HttpServlet {
 		String address=request.getParameter("address");
 		long contact=Long.parseLong(request.getParameter("contact"));
 		String gender=request.getParameter("gender");
+		String id=request.getParameter("id");
+		System.out.println("value of id is "+ id);
 		
 		PreparedStatement ps = null;
 		
-		String sql = "Insert into student(name,address,contact,gender)values(?,?,?,?)";
-
-		try {
+	
+		
+		String sql="";
+				try {
+					
+					if(id==null  || id.isEmpty()) {
+						 sql = "Insert into student(name,address,contact,gender)values(?,?,?,?)";
+					}else {
+						sql="update student set name=?, address=?, contact=?, gender=? where id=?";
+							
+					}
 			ps = DatabaseConnection.getConnection().prepareStatement(sql);
 			ps.setString(1,name);
 			ps.setString(2, address);
 			ps.setLong(3,contact);
 			ps.setString(4, gender);
+			if(id!=null && !id.isEmpty()) {
+				ps.setInt(5, Integer.parseInt(id));
+				
+			}
 			ps.executeUpdate();
 			
 		}catch(Exception err) {
@@ -48,7 +62,7 @@ public class StudentController extends HttpServlet {
 		ResultSet rs=ps.executeQuery();
 		
 		while(rs.next()) {
-			int id=rs.getInt("id");
+			int id1=rs.getInt("id");
 			String name1=rs.getString("name");
 			String address1=rs.getString("address");
 			Long contact1=rs.getLong("contact");
@@ -56,7 +70,7 @@ public class StudentController extends HttpServlet {
 			
 			 Student student = new Student();
 			 student.setName(name1);
-			 student.setId(id);
+			 student.setId(id1);
 			 student.setContact(contact1);
 			 student.setGender(gender1);
 			 student.setAddress(address1);
