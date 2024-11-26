@@ -83,11 +83,6 @@ public class StudentController extends HttpServlet {
 		}catch(Exception e) {
 			System.out.println(e);
 		}
-//		System.out.println("id \t name /t address /t contact /t gender");
-//		for(Student std: studentList) {
-//			System.out.println(std.id+"\t"+std.name);
-//		}
-		
 		
 		
 		RequestDispatcher rd=request.getRequestDispatcher("student_details.jsp");

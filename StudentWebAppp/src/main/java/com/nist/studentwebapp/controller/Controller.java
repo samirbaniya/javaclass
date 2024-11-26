@@ -1,11 +1,9 @@
 package com.nist.studentwebapp.controller;
 
-import java.awt.Desktop.Action;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +20,7 @@ public class Controller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		String value=request.getParameter("action");// edit
+		String value=request.getParameter("action");
 		PreparedStatement ps=null;
 		ArrayList<Student>studentList=new ArrayList<>();
 		
@@ -98,17 +96,10 @@ public class Controller extends HttpServlet {
 		   rd.forward(request, response);
 		 
 			
-			
 			}catch(Exception e) {
 				System.out.println(e);
 			}
-			
-		}
-
-		
-		
-		
-		
+		}	
 	}
 
 	
