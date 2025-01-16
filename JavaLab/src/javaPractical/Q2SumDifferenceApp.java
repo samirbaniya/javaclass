@@ -3,7 +3,7 @@ package javaPractical;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class SumDifferenceApp2 {
+public class Q2SumDifferenceApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Sum and Difference Finder");
         frame.setSize(400, 300);

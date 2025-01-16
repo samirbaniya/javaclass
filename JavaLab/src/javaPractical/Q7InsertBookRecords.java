@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class InsertBookRecords7 {
+public class Q7InsertBookRecords {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost/library";
         String username = "root";

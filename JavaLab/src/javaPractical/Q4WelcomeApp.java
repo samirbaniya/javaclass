@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class WelcomeApp4 {
+public class Q4WelcomeApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Welcome App");
         frame.setSize(400, 200);

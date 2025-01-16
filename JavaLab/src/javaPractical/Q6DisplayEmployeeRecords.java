@@ -2,7 +2,7 @@ package javaPractical;
 
 import java.sql.*;
 
-public class DisplayEmployeeRecords6 {
+public class Q6DisplayEmployeeRecords {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost/testdb";
         String username = "root";

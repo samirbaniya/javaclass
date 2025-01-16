@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ComboBoxTextFieldApp5 {
+public class Q5ComboBoxTextFieldApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("ComboBox to TextField");
         frame.setSize(400, 200);

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ColorButtonApp3 {
+public class Q3ColorButtonApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Color Button App");
         frame.setSize(400, 300);

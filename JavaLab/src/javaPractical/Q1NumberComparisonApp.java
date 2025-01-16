@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class NumberComparisonApp1 {
+public class Q1NumberComparisonApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Number Comparison");
         frame.setSize(400, 300);
@@ -66,7 +66,6 @@ public class NumberComparisonApp1 {
             }
         });
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 }
