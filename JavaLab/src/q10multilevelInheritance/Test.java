@@ -1,4 +1,4 @@
-package multilevelInheritance;
+package q10multilevelInheritance;
 
 class Animal {
     void sound() {

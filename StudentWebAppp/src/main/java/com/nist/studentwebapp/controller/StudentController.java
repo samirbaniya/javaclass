@@ -23,9 +23,7 @@ public class StudentController extends HttpServlet {
 		String address=request.getParameter("address");
 		long contact=Long.parseLong(request.getParameter("contact"));
 		String gender=request.getParameter("gender");
-		String id=request.getParameter("id");
-		System.out.println("value of id is "+ id);
-		
+		String id=request.getParameter("id");		
 		PreparedStatement ps = null;
 		
 	

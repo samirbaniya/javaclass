@@ -1,4 +1,4 @@
-package multipleInheritance;
+package q10multipleInheritance;
 
 interface Animal {
     void sound();

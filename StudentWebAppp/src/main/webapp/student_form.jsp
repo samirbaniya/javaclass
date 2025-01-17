@@ -13,18 +13,18 @@
 	
 	        <input type="hidden" name="id" value="${studentKey.id }">
 			<label for="name">Name</label>
-            <input type="text" name="name" value="${studentKey.name}"><br><br>
+            <input type="text" name="name" value="${studentKey.name}"  required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed." ><br><br>
 
             <label for="address">Address</label>
-            <input type="text" name="address" value="${studentKey.address}"><br><br>
+            <input type="text" name="address" value="${studentKey.address}" required><br><br>
 
 			<label for="contact">Contact Number</label>
-           <%-- <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="9841554532"><br><br>--%>
-            <input type="number" name="contact" placeholder="9841554532" value="${studentKey.contact}"><br><br>
+            <input type="tel" name="contact" placeholder="9841554532" value="${studentKey.contact}" required pattern="[0-9]{10}" title="Enter a 10-digit number."><br><br>
 
 
             <label for="gender">Gender</label>
-            <select name="gender">
+            <select name="gender" required>
+            <option value="">Select Gender</option>
                <option value="male" ${studentKey.gender == 'male' ? 'selected' : ''}>Male</option>
 
                 <option value="female" ${studentKey.gender == 'female' ? 'selected' : ''}>Female</option>
