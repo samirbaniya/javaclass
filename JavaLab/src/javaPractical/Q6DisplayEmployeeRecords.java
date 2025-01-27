@@ -11,8 +11,10 @@ public class Q6DisplayEmployeeRecords {
         String query = "SELECT * FROM employee";
 
         try {
-            Connection connection = DriverManager.getConnection(url, username, password);
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            Connection connection = DriverManager.getConnection(url,
+            		username, password);
+            PreparedStatement preparedStatement = connection.
+            		prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             System.out.println("ID \t Name\t\t Post\t\tSalary");
@@ -23,7 +25,8 @@ public class Q6DisplayEmployeeRecords {
                 String post = resultSet.getString("post");
                 double salary = resultSet.getDouble("salary");
 
-                System.out.println(id + "\t " + name + "\t " + post + "\t" + salary);
+                System.out.println(id + "\t " + name + "\t " + post +
+                		"\t" + salary);
             }
 
         } catch (Exception e) {

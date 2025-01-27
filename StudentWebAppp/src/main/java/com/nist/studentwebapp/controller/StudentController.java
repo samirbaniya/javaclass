@@ -18,7 +18,8 @@ import com.nist.webapp.databaseconnection.DatabaseConnection;
 public class StudentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, 
+			HttpServletResponse response) throws ServletException, IOException {
 		String name=request.getParameter("name");
 		String address=request.getParameter("address");
 		long contact=Long.parseLong(request.getParameter("contact"));
@@ -32,9 +33,11 @@ public class StudentController extends HttpServlet {
 				try {
 					
 					if(id==null  || id.isEmpty()) {
-						 sql = "Insert into student(name,address,contact,gender)values(?,?,?,?)";
+						 sql = "Insert into student(name,address,"
+						 		+ "contact,gender)values(?,?,?,?)";
 					}else {
-						sql="update student set name=?, address=?, contact=?, gender=? where id=?";
+						sql="update student set name=?, address=?,"
+								+ " contact=?, gender=? where id=?";
 							
 					}
 			ps = DatabaseConnection.getConnection().prepareStatement(sql);

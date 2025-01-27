@@ -1,3 +1,9 @@
+ /*Create a GUI using swing that contains two fields two buttons (Small and Large) and a label.
+When Small button is clicked, smaller of two numbers entered from text fields should be
+displayed in the label and when large button is clicked, larger of two numbers entered from text
+fields should be displayed in the label.*/
+
+
 package javaPractical;
 
 import javax.swing.*;

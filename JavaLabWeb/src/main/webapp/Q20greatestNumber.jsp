@@ -42,7 +42,8 @@
                 greatest = c;
             }
 %>
-            <h2>The greatest number among <%= a %>, <%= b %>, and <%= c %> is: <%= greatest %></h2>
+            <h2>The greatest number among <%= a %>, <%= b %>, and 
+            <%= c %> is: <%= greatest %></h2>
 <%
         } catch (Exception e) {
 %>

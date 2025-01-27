@@ -10,7 +10,8 @@ public class Q7InsertBookRecords {
         String username = "root";
         String password = "";
 
-        String query = "INSERT INTO book (id, title, author, publisher, price) VALUES " +
+        String query = "INSERT INTO book (id, title, author,"
+        		+ " publisher, price) VALUES " +
                 "(1, 'Java Programming', 'James Gosling', 'Tech Press', 45.99), " +
                 "(2, 'Effective Java', 'Joshua Bloch', 'Pearson', 55.50), " +
                 "(3, 'Head First Java', 'Kathy Sierra', 'OReilly', 40.00), " +
@@ -18,8 +19,10 @@ public class Q7InsertBookRecords {
                 "(5, 'Spring in Action', 'Craig Walls', 'Manning', 60.00)";
 
         try {
-        	Connection connection = DriverManager.getConnection(url, username, password);
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
+        	Connection connection = DriverManager.getConnection(url, 
+        			username, password);
+             PreparedStatement preparedStatement = connection
+            		 .prepareStatement(query);
 
             preparedStatement.executeUpdate();
             System.out.println("Records inserted successfully.");

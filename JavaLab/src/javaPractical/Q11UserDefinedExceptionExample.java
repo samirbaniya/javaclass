@@ -8,11 +8,12 @@ class InvalidAgeException extends Exception {
 public class Q11UserDefinedExceptionExample {
 
 	public static void main(String[] args) throws InvalidAgeException {
-		int age=3;
+		int age=17;
 		if(age>=18) {
 			System.out.println("User can vote");
 		}else {
-			InvalidAgeException obj = new InvalidAgeException("User with age "+age+" cannot vote");
+			InvalidAgeException obj = new InvalidAgeException("User "
+					+ "with age "+age+" cannot vote");
 			throw obj;
 			}
 	}

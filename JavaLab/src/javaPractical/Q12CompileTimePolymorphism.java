@@ -22,9 +22,12 @@ public class Q12CompileTimePolymorphism {
         Calculator calc = new Calculator();
 
         // Calling different overloaded methods
-        System.out.println("Sum of two integers: " + calc.add(5, 10));
-        System.out.println("Sum of three integers: " + calc.add(5, 10, 15));
-        System.out.println("Sum of two doubles: " + calc.add(5.5, 10.5));
+        System.out.println("Sum of two integers: "
+        + calc.add(5, 10));
+        System.out.println("Sum of three integers: "
+        + calc.add(5, 10, 15));
+        System.out.println("Sum of two doubles: "
+        + calc.add(5.5, 10.5));
     }
 }
 

@@ -38,7 +38,8 @@ function confirmDelete(studentName) {
                     <a href="Controller?action=edit&id=${student.id}">
                     <button type="button" class="btn btn-success">Edit</button>
                     </a>
-                    <a href="Controller?action=delete&id=${student.id}"onclick="return confirmDelete('${student.name}')">
+                    <a href="Controller?action=delete&id=${student.id}"
+                    onclick="return confirmDelete('${student.name}')">
                     <button type="button" class="btn btn-danger">Delete</button>
                     </a>
                     </td>

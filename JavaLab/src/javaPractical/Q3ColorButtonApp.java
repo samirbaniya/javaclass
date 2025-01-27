@@ -2,8 +2,7 @@ package javaPractical;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Q3ColorButtonApp {
     public static void main(String[] args) {
@@ -24,8 +23,7 @@ public class Q3ColorButtonApp {
         frame.add(greenButton);
 
         JLabel resultLabel = new JLabel("Color will be displayed here");
-        resultLabel.setBounds(50, 200, 300, 30);
-        frame.add(resultLabel);
+        
 
         redButton.addActionListener(new ActionListener() {
             @Override
@@ -34,7 +32,9 @@ public class Q3ColorButtonApp {
                 resultLabel.setForeground(Color.RED);
             }
         });
-
+        resultLabel.setBounds(50, 200, 300, 30);
+        frame.add(resultLabel);
+        
         blueButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
